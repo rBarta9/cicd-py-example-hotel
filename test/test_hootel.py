@@ -12,7 +12,7 @@ class TestHootel(object):
         options = Options()
         options.add_experimental_option("detach", True)
         options.add_argument('--guest')
-        options.add_argument('--start-maximized')
+        # options.add_argument('--start-maximized')
         options.add_argument('--headless')
         options = Options()
         options.add_experimental_option("detach", True)
@@ -27,6 +27,8 @@ class TestHootel(object):
         # browser.maximize_window()
         self.browser = webdriver.Chrome(options=options)
         self.browser.get(URL)
+        self.browser.set_window_size(1024, 768)
+        time.sleep(1)
 
 
     def teardown_method(self):
