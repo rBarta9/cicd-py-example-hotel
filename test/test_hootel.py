@@ -23,7 +23,7 @@ class TestHootel(object):
         }
 
         options.add_experimental_option("prefs", prefs)
-        browser = webdriver.Chrome(options=options)
+        # browser = webdriver.Chrome(options=options)
         # browser.maximize_window()
         self.browser = webdriver.Chrome(options=options)
         self.browser.get(URL)
