@@ -11,11 +11,11 @@ class TestHootel(object):
         URL = 'http://hotel-v3.progmasters.hu/'
         options = Options()
         options.add_experimental_option("detach", True)
-        options.add_argument('--guest')
         # options.add_argument('--start-maximized')
         options.add_argument('--headless')
+        options.add_argument('--guest')
         options = Options()
-        options.add_experimental_option("detach", True)
+        # options.add_experimental_option("detach", True)
         prefs = {
             "https_only_mode_enabled": False,
             # "https_first_balanced_mode_enabled": False,
