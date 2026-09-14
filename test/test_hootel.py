@@ -12,22 +12,22 @@ class TestHootel(object):
         options = Options()
         options.add_experimental_option("detach", True)
         options.add_argument('--guest')
-        # options.add_argument('--start-maximized')
+        options.add_argument('--start-maximized')
         options.add_argument('--headless')
         options = Options()
         options.add_experimental_option("detach", True)
         prefs = {
             "https_only_mode_enabled": False,
-            "https_first_balanced_mode_enabled": False,
-            "https_first_mode_incognito_enabled": False
+            # "https_first_balanced_mode_enabled": False,
+            # "https_first_mode_incognito_enabled": False
         }
 
         options.add_experimental_option("prefs", prefs)
         browser = webdriver.Chrome(options=options)
-        browser.maximize_window()
+        # browser.maximize_window()
         self.browser = webdriver.Chrome(options=options)
         self.browser.get(URL)
-        print(self.browser.get_window_size())
+
 
     def teardown_method(self):
         self.browser.quit()
